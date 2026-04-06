@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXLUX (NXLX)</title>
+  <meta name="description" content="NEXLUX (NXLX) — Activo digital controlado sobre Stellar con gobernanza multisig y seguridad avanzada." />
+  <link rel="icon" href="/logo.png" />
+  <style>
+    :root{
+      --bg:#0A0A0A; --card:#111; --muted:#B3B3B3; --gold:#D4AF37; --line:#1f1f1f; --accent:#4B2E83;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#fff;}
+    a{color:var(--gold);text-decoration:none}
+    header{padding:48px 24px;text-align:center;border-bottom:1px solid var(--line)}
+    h1{margin:0;color:var(--gold);font-size:56px;letter-spacing:2px}
+    .tagline{margin-top:10px;color:#ddd;font-size:18px}
+    .wrap{max-width:1080px;margin:auto;padding:24px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+    .section{margin:28px 0}
+    .section h2{color:var(--gold);margin:0 0 12px}
+    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{padding:12px 18px;border-radius:10px;border:1px solid var(--gold);color:#000;background:var(--gold);font-weight:600}
+    .btn.secondary{background:transparent;color:var(--gold)}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, monospace;word-break:break-all}
+    footer{margin-top:40px;border-top:1px solid var(--line);padding:20px;color:#888;text-align:center}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:#ccc;margin-right:8px}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="/logo.png" alt="NEXLUX logo" width="72" height="72" />
+  <h1>NEXLUX</h1>
+  <div class="tagline">Next Level Financial Infrastructure</div>
+  <div class="btns">
+    <a class="btn" href="#how">Cómo adquirir</a>
+    <a class="btn secondary" href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+    <a class="btn secondary" href="/\.well-known/stellar.toml" target="_blank">stellar.toml</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="section">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Asset</h3>
+        <p><span class="badge">Code</span> NXLX</p>
+        <p><span class="badge">Name</span> NEXLUX</p>
+        <p><span class="badge">Network</span> Stellar</p>
+      </div>
+      <div class="card">
+        <h3>Supply</h3>
+        <p><span class="badge">Total</span> 1,000,000,000</p>
+        <p><span class="badge">Decimals</span> 7</p>
+        <p><span class="badge">Model</span> Fixed</p>
+      </div>
+      <div class="card">
+        <h3>Seguridad</h3>
+        <ul>
+          <li>Multisig 2/3</li>
+          <li>AUTH_REQUIRED</li>
+          <li>AUTH_REVOCABLE</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <h2>Cómo adquirir NEXLUX (NXLX)</h2>
+    <div class="card">
+      <ol>
+        <li>Instala una wallet compatible con Stellar (p.ej., Freighter).</li>
+        <li>Fondea tu cuenta con XLM.</li>
+        <li>Crea una <strong>trustline</strong> al asset NXLX usando el issuer.</li>
+        <li>Compra NXLX en el DEX de Stellar o recibe desde Distribution.</li>
+      </ol>
+      <p><strong>Issuer:</strong></p>
+      <p class="mono">GBCTTSQHGSEQUAFSHESWE22UOXKWZ4D34MGDTCL56JRPUL77WYI4SCPV</p>
+      <div class="btns">
+        <a class="btn" href="https://stellar.expert/explorer/testnet/asset/NXLX-GBCTTSQHGSEQUAFSHESWE22UOXKWZ4D34MGDTCL56JRPUL77WYI4SCPV" target="_blank">Ver en Explorer</a>
+        <a class="btn secondary" href="#risk">Condiciones</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Arquitectura</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Issuer (frío)</h3>
+        <p>Emite el activo y controla autorizaciones. No operativo.</p>
+      </div>
+      <div class="card">
+        <h3>Distribution (operativo)</h3>
+        <p>Liquidez, distribución y operaciones del ecosistema.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Liquidez</h2>
+    <div class="card">
+      <p>Par recomendado: <strong>NXLX/XLM</strong>. Provisión desde Liquidity Wallet con multisig.</p>
+    </div>
+  </section>
+
+  <section id="risk" class="section">
+    <h2>Condiciones</h2>
+    <div class="card">
+      <p>El uso del activo requiere autorización de trustline. La autoridad puede revocar acceso en caso de riesgo (fraude o compromiso de cuentas). Gobernanza mediante multisig 2/3.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Enlaces</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <p><strong>stellar.toml</strong></p>
+        <p><a href="/.well-known/stellar.toml" target="_blank">/.well-known/stellar.toml</a></p>
+      </div>
+      <div class="card">
+        <p><strong>Contacto</strong></p>
+        <p><a href="mailto:contact@nexlux.io">contact@nexlux.io</a></p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 NEXLUX — All rights reserved
+</footer>
+
+</body>
+</html>
